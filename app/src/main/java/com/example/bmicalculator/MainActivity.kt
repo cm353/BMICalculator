@@ -29,7 +29,8 @@ class MainActivity : AppCompatActivity() {
         }
         tv_5.setText(viewModel.bmiCalc().toString())
         when(viewModel.categorizeBMI()){
-            -2 -> tv_6.setText(R.string.sev_uw)
+            -3 -> tv_6.setText(R.string.sev_uw)
+            -2 -> tv_6.setText(R.string.me_uw)
             -1 -> tv_6.setText(R.string.li_uw)
             0 -> tv_6.setText(R.string.norm_w)
             1 -> tv_6.setText(R.string.li_ow)
@@ -41,7 +42,7 @@ class MainActivity : AppCompatActivity() {
 
     fun hideKeyboard(v : View) {
     val imm = getSystemService(Context.INPUT_METHOD_SERVICE) as InputMethodManager
-        imm.hideSoftInputFromWindow(v.getWindowToken(), 0);
+        imm.hideSoftInputFromWindow(v.getWindowToken(), 0)
     }
 
 }

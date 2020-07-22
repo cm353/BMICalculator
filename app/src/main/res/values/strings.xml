@@ -1,6 +1,6 @@
 <resources>
     <string name="app_name">BMICalculator</string>
-    <string name="sev_uw">severe underweight</string>
+    <string name="sev_uw">severely underweight</string>
     <string name="me_uw">medium underweight</string>
     <string name="li_uw">light underweight</string>
     <string name="norm_w">normal weight</string>
