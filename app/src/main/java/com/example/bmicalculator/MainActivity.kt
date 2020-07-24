@@ -21,13 +21,33 @@ class MainActivity : AppCompatActivity() {
 
     fun btn_1Click(v: View) {
         hideKeyboard(v)
+        parseUserInput()
+        calcBMI()
+        updateUI()
+    }
+
+    override fun onRestoreInstanceState(savedInstanceState: Bundle) {
+        super.onRestoreInstanceState(savedInstanceState)
+        if(viewModel.result != 0.0) {
+            updateUI()
+        }
+    }
+
+    fun parseUserInput() {
         try {
             viewModel.height = ev_1.text.toString().toDouble()
             viewModel.weight = ev_2.text.toString().toDouble()
         } catch (e : NumberFormatException) {
             Toast.makeText(applicationContext, R.string.NaN_toast, Toast.LENGTH_SHORT).show()
         }
-        tv_5.setText(viewModel.bmiCalc().toString())
+    }
+
+    fun calcBMI(){
+        viewModel.bmiCalc()
+    }
+
+    fun updateUI() {
+        tv_5.setText(viewModel.result.toString())
         when(viewModel.categorizeBMI()){
             -3 -> tv_6.setText(R.string.sev_uw)
             -2 -> tv_6.setText(R.string.me_uw)

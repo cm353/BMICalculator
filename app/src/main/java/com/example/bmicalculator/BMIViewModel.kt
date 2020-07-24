@@ -8,9 +8,8 @@ class BMIViewModel : ViewModel() {
     var height : Double = 0.0
     var result : Double = 0.0
 
-    fun bmiCalc() : Double {
+    fun bmiCalc() {
         result = weight / Math.pow(height, 2.0)
-        return result
     }
 
     fun categorizeBMI() : Int {
