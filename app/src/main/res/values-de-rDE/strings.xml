@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">BMI-Rechner</string>
+    <string name="sev_uw">starkes Untergewicht</string>
+    <string name="me_uw">mittleres Untergewicht</string>
+    <string name="li_uw">leichtes Untergewicht</string>
+    <string name="norm_w">Normal</string>
+    <string name="li_ow">prä-Adipositas</string>
+    <string name="me_ow">Adipositas Grad I</string>
+    <string name="sev_ow">Adipositas Grad II</string>
+    <string name="tre_ow">Adipositas Grad III</string>
+    <string name="tv_1">Größe</string>
+    <string name="tv_2">Gewicht</string>
+    <string name="btn_1">Berechne BMI</string>
+    <string name="tv_4">BMI-Kategorie</string>
+    <string name="tv_6">BMI Kategorie</string>
+    <string name="ev_1">Größe</string>
+    <string name="ev_2">Gewicht in kg</string>
+    <string name="NaN_toast">Bitte Zahlen eingeben</string>
+    <string name="centimeter">Zentimeter</string>
+    <string name="meter">Meter</string>
+</resources>

@@ -4,11 +4,13 @@ import android.content.Context
 import android.os.Bundle
 import android.view.View
 import android.view.inputmethod.InputMethodManager
+import android.widget.RadioGroup
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import androidx.lifecycle.ViewModelProvider
 import kotlinx.android.synthetic.main.activity_main.*
 import java.lang.NumberFormatException
+
 
 class MainActivity : AppCompatActivity() {
 
@@ -18,6 +20,10 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
         viewModel = ViewModelProvider(this).get(BMIViewModel::class.java)
+        parseRadioGroup()
+        if(!rb_centimeter.isChecked && !rb_meter.isChecked)
+            rb_centimeter.setChecked(true)
+
     }
 
     fun btn_1Click(v: View) {
@@ -41,6 +47,15 @@ class MainActivity : AppCompatActivity() {
         } catch (e : NumberFormatException) {
             Toast.makeText(applicationContext, R.string.NaN_toast, Toast.LENGTH_SHORT).show()
         }
+    }
+
+    fun parseRadioGroup() {
+        rg_height.setOnCheckedChangeListener({ radioGroup: RadioGroup, i: Int ->
+            if (rb_meter.isChecked)
+                viewModel.unitWeightKg = true
+            else if (rb_centimeter.isChecked)
+                viewModel.unitWeightKg = false
+        })
     }
 
     fun calcBMI(){

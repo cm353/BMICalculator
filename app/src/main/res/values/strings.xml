@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">BMICalculator</string>
+    <string name="app_name">BMI-Calculator</string>
     <string name="sev_uw">severely underweight</string>
     <string name="me_uw">medium underweight</string>
     <string name="li_uw">light underweight</string>
@@ -11,11 +11,13 @@
     <string name="tv_1">enter height</string>
     <string name="tv_2">enter weight</string>
     <string name="btn_1">calculate BMI</string>
-    <string name="tv_3">BMI=</string>
+    <string name="tv_3" translatable="false">BMI=</string>
     <string name="tv_4">BMI category=</string>
-    <string name="tv_5">BMI</string>
+    <string name="tv_5" translatable="false">BMI</string>
     <string name="tv_6">BMI Category</string>
-    <string name="ev_1">height in m</string>
+    <string name="ev_1">height</string>
     <string name="ev_2">weight in kg</string>
     <string name="NaN_toast">please enter numbers</string>
+    <string name="centimeter">centimeter</string>
+    <string name="meter">meter</string>
 </resources>
