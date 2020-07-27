@@ -5,18 +5,19 @@ import android.os.Bundle
 import android.view.View
 import android.view.inputmethod.InputMethodManager
 import android.widget.Toast
-import androidx.activity.viewModels
 import androidx.appcompat.app.AppCompatActivity
+import androidx.lifecycle.ViewModelProvider
 import kotlinx.android.synthetic.main.activity_main.*
 import java.lang.NumberFormatException
 
 class MainActivity : AppCompatActivity() {
 
-    val viewModel: BMIViewModel by viewModels()
+    lateinit var viewModel: BMIViewModel
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
+        viewModel = ViewModelProvider(this).get(BMIViewModel::class.java)
     }
 
     fun btn_1Click(v: View) {
